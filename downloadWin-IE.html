@@ -1,0 +1,75 @@
+<?php 
+
+#sets a cookie when the page is accessed
+$download_tracker = "yes";  
+setcookie('download_tracker',$download_tracker,time() + (86400 * 7)); 
+
+//this checks to see if the cookie is set and prevents user from downloading more than once in 7 days
+
+if (isset($_COOKIE['download_tracker'])) {
+echo "<br/>Hello, ".$customer_name.". I'm sorry, but you can only download this software once every 7 days.  Please try again later.";
+exit(); //stop the rest of the program from happening
+}
+?>
+
+<html>
+
+<head>
+
+<style type="text/css">
+
+body
+{
+background:white
+}
+#element1
+{
+color:darkblue;
+font-size:24pt
+}
+
+#element2
+{
+float:left;
+color:black;
+font-style:italic
+}
+
+#element3
+{
+font-size:36pt;
+color:darkblue;
+float:left;
+}
+
+#element4
+{
+font-size:24pt;
+color:orange;
+float:left;
+}
+
+img
+{
+display:block
+}
+
+</style>
+</head>
+
+<body>
+<span id="element3">
+Your browser is Internet Explorer and your operating system is Windows. <br/><br/>  Click the button below to download our software.
+<br/><br/>
+</span>
+<span id="element4">
+<a href="download.php">
+<IMG SRC="http://dianaprince.usersource.com/orangedownload2.jpg">
+</a>
+Thank you for your interest in our software!</a><br/>
+
+</span>
+
+</body>
+
+</html>
