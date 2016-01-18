@@ -1,5 +1,5 @@
 # SessionsandUserRegistration
-This project is similar to the other user registration project, except it uses sessions instead of cookies to track user activity.
+This PHP project is similar to the other user registration project, except it uses sessions instead of cookies to track user activity.
 
 Download Interface with User Reg and Sessions
 
